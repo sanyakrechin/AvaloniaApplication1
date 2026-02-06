@@ -1,6 +1,5 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using System.Diagnostics;
 
 namespace AvaloniaApplication1.Views
 {
@@ -10,9 +9,12 @@ namespace AvaloniaApplication1.Views
         {
             InitializeComponent();
         }
+
         private void Button_OnClick(object? sender, RoutedEventArgs e)
         {
-            Debug.WriteLine($"Click! Celsius={Celsius.Text}");
+            var secondWindow = new SecondWindow();
+            secondWindow.Show();
+            // Optional: this.Close(); if you want to close the main window
         }
     }
 }
