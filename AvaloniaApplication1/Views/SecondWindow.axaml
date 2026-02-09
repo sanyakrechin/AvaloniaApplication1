@@ -1,11 +1,23 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.Views.SecondWindow"
-        Title="Second Window"
-        Width="300"
-        Height="200">
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock Text="Welcome to the Second Window!" FontSize="20" Margin="10"/>
-        <Button Content="Close" Click="CloseButton_Click" HorizontalAlignment="Center"/>
+        Title="Dashboard" 
+        Width="400" Height="400"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="20">
+        <TextBlock x:Name="WelcomeText" Text="Welcome!" FontSize="18" FontWeight="Bold" Foreground="#4A56E2" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="350"/>
+        
+        <Button Content="✨ Do Magic" Click="MagicButton_Click" 
+                HorizontalAlignment="Stretch" Height="50" CornerRadius="25"
+                Background="#BA4DE5" Foreground="White" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="10" Opacity="0.3" OffsetY="3"/>
+            </Button.Effect>
+        </Button>
+
+        <Button Content="Logout" Click="Logout_Click" 
+                HorizontalAlignment="Center" Width="100" Height="40" CornerRadius="20"
+                Background="#F4F4F4" Foreground="#666666"/>
     </StackPanel>
 </Window>
