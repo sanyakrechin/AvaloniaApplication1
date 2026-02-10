@@ -17,7 +17,7 @@ namespace AvaloniaApplication1.Views
             var welcome = this.FindControl<TextBlock>("WelcomeText");
             if (welcome != null)
             {
-                welcome.Text = $"Welcome, {username}!";
+                welcome.Text = $"Добро пожаловать, {username}!";
             }
         }
 
@@ -39,11 +39,11 @@ namespace AvaloniaApplication1.Views
             if (welcome != null)
             {
                 string[] quotes = {
-                    "Code is like humor. When you have to explain it, it’s bad.",
-                    "First, solve the problem. Then, write the code.",
-                    "Experience is the name everyone gives to their mistakes.",
-                    "In order to be irreplaceable, one must always be different.",
-                    "The only way to do great work is to love what you do."
+                    "Код как юмор. Если его нужно объяснять, значит он плох.",
+                    "Сначала решите проблему, затем пишите код.",
+                    "Опыт — это имя, которое каждый дает своим ошибкам.",
+                    "Чтобы быть незаменимым, нужно всегда быть разным.",
+                    "Единственный способ делать великие дела — любить то, что вы делаете."
                 };
                 welcome.Text = quotes[_random.Next(quotes.Length)];
                 welcome.Foreground = Brushes.White;
