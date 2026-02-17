@@ -11,8 +11,10 @@
         Width="400"
         Height="450">
 
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Click="Button_OnClick" FontSize="20">Перейти во второе окно</Button>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="10">
+        <TextBlock HorizontalAlignment="Center" FontSize="16">Как тебя зовут?</TextBlock>
+        <TextBox x:Name="NameInput" Width="200" TextAlignment="Center" Watermark="Введи имя..."/>
+        <Button Click="Button_OnClick" HorizontalAlignment="Center" FontSize="18">Поприветствовать</Button>
     </StackPanel>
     
 </Window>

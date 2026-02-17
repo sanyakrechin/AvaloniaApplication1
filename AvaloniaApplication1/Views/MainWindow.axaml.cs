@@ -12,9 +12,14 @@ namespace AvaloniaApplication1.Views
 
         private void Button_OnClick(object? sender, RoutedEventArgs e)
         {
+            var nameInput = this.FindControl<TextBox>("NameInput");
+            string userName = nameInput?.Text ?? "Аноним";
+
             var secondWindow = new SecondWindow();
+            secondWindow.Title = $"Добро пожаловать, {userName}!";
+            
             secondWindow.Show();
-            // Optional: this.Close(); if you want to close the main window
+            this.Close(); // Закроем главное, когда открываем второе
         }
     }
 }
